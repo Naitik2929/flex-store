@@ -1,9 +1,9 @@
 {
-  "name": "flex-store",
-  "version": "1.0.0",
+  "name": "@naitik/flex-store",
+  "version": "1.0.4",
   "description": "A flexible key-value store solution for Node.js projects, offering easy data storage and retrieval",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "npx rollup -c"
   },

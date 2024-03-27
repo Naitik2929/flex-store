@@ -1,6 +1,6 @@
 {
   "name": "@naitik/flex-store",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A flexible key-value store solution for Node.js projects, offering easy data storage and retrieval",
   "type": "module",
   "main": "dist/index.js",

@@ -4,20 +4,29 @@ Flex-Store is a flexible key-value store solution for Node.js projects, offering
 
 ## Installation
 
-```bash
-npm i @naitik/flex-store
+npm i @naitik/flex-store-store
 
-Usage
+## Usage
 
-const FlexStore = require('flex-store');
-const store = new FlexStore();
+            import DB from '@naitik/flex-store' ;
+            const db = new DB();
+            
+            try {
+                db.add('user1', { name: 'John', age: 30 });
+                console.log('Data added successfully.');
+            } catch (error) {
+                console.error('Error adding data:', error.message);
+            }
 
-store.set('message', 'Hello World!');
-console.log(store.get('message'));
+            console.log(db.get('user1'))
 
-Available Commands
-store.set(key, value): Sets a key-value pair in the store.
-store.get(key): Retrieves the value associated with the specified key.
-store.has(key): Checks if a key exists in the store.
-store.delete(key): Deletes the key-value pair associated with the specified key.
-store.clear(): Clears all key-value pairs from the store.
+
+## Available commands
+            db.add(key, value) - Adds a key-value pair to the database
+            db.edit(key, value) - Edits a key-value pair in the database
+            db.get(key) - Gets a key-value pair from the database based on input
+            db.remove(key) - Removes a key-value pair from the database
+            db.dump(consolelog) - Returns the database as JSON - consolelog is optional and will also log the output to the console (useful for testing!)
+            db.load(json) - Loads a JSON file into the database
+            db.export() - Exports the database to database.bzdb
+            db.clear() - Clears the database
